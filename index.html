@@ -16,12 +16,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #0056b3; /* Adjust the color to match your branding */
+            background-color: #0056b3;
             color: white;
             padding: 10px 20px;
-        }
-        .header nav {
-            margin-left: 20px;
         }
         .header nav ul {
             list-style: none;
@@ -41,7 +38,7 @@
         }
         section {
             padding: 20px;
-            margin: 0 20px;
+            margin: 20px;
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -50,51 +47,28 @@
             padding: 10px 0;
             background-color: #0056b3;
             color: white;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-        @media (max-width: 768px) {
-            .header nav ul li {
-                display: block;
-                margin-top: 10px;
-            }
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .header img {
-                margin-top: 10px;
-                align-self: center;
-            }
         }
     </style>
 </head>
 <body>
     <header class="header">
+        <img src="whl.jpeg" alt="Woburn Hockey League Logo">
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="standings.html">Standings</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
         </nav>
-        <img src="whl.jpeg" alt="Woburn Hockey League Logo">
     </header>
     <section id="about">
-        <h2>About Us</h2>
-        <p>The Woburn Hockey League is dedicated to promoting best f'n mens league in North America.</p>
-    </section>
-    <section id="schedule">
-        <h2>Season Schedule</h2>
-        <p>Check out our full schedule to see upcoming games and events.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For more information, reach out to us via email at <a href="mailto:ndrew90@gmail.com">Suckit@woburnhockeyleague.com</a>.</p>
+        <h2>Welcome to the Woburn Hockey League</h2>
+        <p>The Woburn Hockey League is dedicated to being the best men’s league in North America.</p>
     </section>
     <footer>
-        <p>© 2025 Woburn Hockey League</p>
+        <p>&copy; 2025 Woburn Hockey League</p>
     </footer>
 </body>
 </html>
