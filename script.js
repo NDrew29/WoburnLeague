@@ -15,4 +15,24 @@ async function includeHTML() {
     });
 }
 
-includeHTML();
+// Function to enable expand/collapse for news headlines
+function setupNewsToggle() {
+    const headlines = document.querySelectorAll(".news-headline");
+
+    headlines.forEach((headline) => {
+        headline.addEventListener("click", () => {
+            const newsItem = headline.parentElement;
+            const content = newsItem.querySelector(".news-content");
+
+            // Toggle visibility and styling
+            const isVisible = content.style.display === "block";
+            content.style.display = isVisible ? "none" : "block";
+            newsItem.classList.toggle("expanded", !isVisible);
+        });
+    });
+}
+
+// Initialize the page after dynamic content is loaded
+includeHTML().then(() => {
+    setupNewsToggle();
+});
