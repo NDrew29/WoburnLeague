@@ -86,3 +86,27 @@ footer {
         font-size: 14px;
     }
 }
+
+/* Add styles for collapsible news content */
+.news-content {
+    display: none; /* Initially hide the news content */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.news-headline {
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-weight: bold;
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+.news-headline:hover {
+    color: #ffcc00; /* Highlight headline on hover */
+}
+
+/* When expanded, add a subtle border to the news item */
+.news-item.expanded {
+    border-left: 3px solid #0056b3;
+    padding-left: 10px;
+}
