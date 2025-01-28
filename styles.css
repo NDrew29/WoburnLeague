@@ -78,3 +78,44 @@ footer {
     background-color: #0056b3;
     color: white;
 }
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Bar */
+.header nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.header nav ul li a.active {
+    text-decoration: underline;
+}
