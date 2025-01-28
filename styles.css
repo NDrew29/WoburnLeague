@@ -6,46 +6,46 @@ body {
     color: #333;
 }
 
-/* Banner Styling */
+/* Header and Banner */
+.header {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .banner {
-    position: relative; /* Set the banner as the reference point for positioning */
+    position: relative;
     width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Navigation Styling */
-.header nav {
-    position: absolute; /* Position the nav over the image */
-    top: 50%; /* Center vertically on the banner */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to exact center */
+    height: 250px; /* Fixed height for the banner */
+    background: url("OBrien.jpg") center/cover no-repeat; /* Use the banner image as background */
     display: flex;
-    gap: 20px; /* Add spacing between links */
-    background: rgba(0, 0, 0, 0.5); /* Optional: translucent background for readability */
-    padding: 10px 20px; /* Add padding around the links */
-    border-radius: 10px; /* Rounded corners for a polished look */
+    align-items: flex-end; /* Position the navigation at the bottom of the banner */
 }
 
-.header nav a {
+.banner nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 10px 0;
+}
+
+.banner nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    margin: 0 15px;
     font-size: 16px;
+    transition: color 0.3s;
 }
 
-.header nav a:hover {
+.banner nav a:hover {
     color: #ffcc00;
 }
 
-.header nav a.active {
+.banner nav a.active {
     text-decoration: underline;
+    color: #ffcc00;
 }
 
 /* Section Styling */
@@ -54,6 +54,7 @@ section {
     margin: 20px;
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Table Styling */
@@ -87,17 +88,19 @@ footer {
     color: white;
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .header nav {
-        flex-direction: column;
-        top: auto;
-        bottom: 10px; /* Position near the bottom of the banner */
-        transform: translate(-50%, 0); /* Adjust transform for bottom placement */
-        gap: 10px;
+    .banner {
+        height: 200px; /* Adjust banner height on smaller screens */
     }
 
-    .header nav a {
+    .banner nav {
+        flex-direction: column; /* Stack links vertically */
+        padding: 15px 0;
+    }
+
+    .banner nav a {
+        margin: 5px 0; /* Adjust spacing for vertical layout */
         font-size: 14px;
     }
 
