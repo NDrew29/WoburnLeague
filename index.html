@@ -4,10 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woburn Hockey League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0056b3; /* Adjust the color to match your branding */
+            color: white;
+            padding: 10px 20px;
+        }
+        .header nav {
+            margin-left: 20px;
+        }
+        .header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .header img {
+            height: 50px;
+        }
+        section {
+            padding: 20px;
+            margin: 0 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0056b3;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .header nav ul li {
+                display: block;
+                margin-top: 10px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header img {
+                margin-top: 10px;
+                align-self: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Woburn Hockey League</h1>
+    <header class="header">
         <nav>
             <ul>
                 <li><a href="#about">About Us</a></li>
@@ -15,15 +79,15 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <img src="whl.jpeg" alt="Woburn Hockey League Logo">
     </header>
     <section id="about">
         <h2>About Us</h2>
-        <p>The Woburn Hockey League is North America's F'n Elite Men's Hockey League</p>
+        <p>The Woburn Hockey League is dedicated to promoting the sport of ice hockey in Woburn through community engagement and excitement around the game.</p>
     </section>
     <section id="schedule">
         <h2>Season Schedule</h2>
         <p>Check out our full schedule to see upcoming games and events.</p>
-        <!-- You can add a table or link to a PDF with the schedule here -->
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
