@@ -66,5 +66,6 @@ function setupBlogToggle() {
 // Initialize the page after dynamic content is loaded
 includeHTML().then(() => {
     setupNewsToggle();
+    setupBlogToggle();
     setupRosterToggle();
 });
