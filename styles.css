@@ -110,3 +110,39 @@ footer {
     border-left: 3px solid #0056b3;
     padding-left: 10px;
 }
+
+/* Team Name Styling */
+.team-name {
+    cursor: pointer;
+    font-weight: bold;
+    color: #0056b3;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.team-name:hover {
+    color: #ffcc00;
+}
+
+/* Roster Table Styling */
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
+
+.roster-table th, .roster-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.roster-table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+.roster-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
