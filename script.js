@@ -47,6 +47,22 @@ function setupRosterToggle() {
     });
 }
 
+// Function to enable expand/collapse for blog sections
+function setupBlogToggle() {
+    const blogTitles = document.querySelectorAll(".blog-title");
+
+    blogTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+            const targetContent = document.getElementById(title.dataset.target);
+            const isVisible = targetContent.style.display === "block";
+            targetContent.style.display = isVisible ? "none" : "block";
+
+            // Toggle expanded class for styling
+            title.parentElement.classList.toggle("expanded", !isVisible);
+        });
+    });
+}
+
 // Initialize the page after dynamic content is loaded
 includeHTML().then(() => {
     setupNewsToggle();
