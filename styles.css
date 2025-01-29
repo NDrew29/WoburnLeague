@@ -156,3 +156,29 @@ footer {
     display: block;
     margin: auto;
 }
+
+/* Blog Title Styling */
+.blog-title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #0056b3;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.blog-title:hover {
+    color: #ffcc00;
+}
+
+/* Blog Content Styling */
+.blog-content {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    line-height: 1.6;
+    padding-left: 10px;
+    border-left: 3px solid #0056b3;
+}
+
+.blog-post.expanded .blog-content {
+    display: block; /* Show when expanded */
+}
