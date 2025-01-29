@@ -172,7 +172,7 @@ footer {
 
 /* Blog Content Styling */
 .blog-content {
-    display: none; /* Initially hidden */
+    /*display: none; /* Initially hidden */
     margin-top: 10px;
     line-height: 1.6;
     padding-left: 10px;
@@ -180,5 +180,5 @@ footer {
 }
 
 .blog-post.expanded .blog-content {
-    display: ; /* Show when expanded */
+    display: block; /* Show when expanded */
 }
