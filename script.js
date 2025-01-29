@@ -32,7 +32,23 @@ function setupNewsToggle() {
     });
 }
 
+// Function to toggle roster visibility
+function setupRosterToggle() {
+    const teamNames = document.querySelectorAll(".team-name");
+
+    teamNames.forEach((teamName) => {
+        teamName.addEventListener("click", () => {
+            const targetTable = document.getElementById(teamName.dataset.target);
+            if (targetTable) {
+                const isVisible = targetTable.style.display === "table";
+                targetTable.style.display = isVisible ? "none" : "table";
+            }
+        });
+    });
+}
+
 // Initialize the page after dynamic content is loaded
 includeHTML().then(() => {
     setupNewsToggle();
+    setupRosterToggle();
 });
