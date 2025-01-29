@@ -15,28 +15,43 @@ async function includeHTML() {
     });
 }
 
+// Function to enable expand/collapse for blog sections
+function setupBlogToggle() {
+    document.querySelectorAll(".blog-title").forEach((title) => {
+        title.addEventListener("click", () => {
+            const targetId = title.getAttribute("data-target");
+            const targetContent = document.getElementById(targetId);
+
+            if (targetContent) {
+                const isVisible = targetContent.style.display === "block";
+                targetContent.style.display = isVisible ? "none" : "block";
+
+                // Toggle expanded class for styling
+                title.classList.toggle("expanded", !isVisible);
+            }
+        });
+    });
+}
+
 // Function to enable expand/collapse for news headlines
 function setupNewsToggle() {
-    const headlines = document.querySelectorAll(".news-headline");
-
-    headlines.forEach((headline) => {
+    document.querySelectorAll(".news-headline").forEach((headline) => {
         headline.addEventListener("click", () => {
             const newsItem = headline.parentElement;
             const content = newsItem.querySelector(".news-content");
 
-            // Toggle visibility and styling
-            const isVisible = content.style.display === "block";
-            content.style.display = isVisible ? "none" : "block";
-            newsItem.classList.toggle("expanded", !isVisible);
+            if (content) {
+                const isVisible = content.style.display === "block";
+                content.style.display = isVisible ? "none" : "block";
+                newsItem.classList.toggle("expanded", !isVisible);
+            }
         });
     });
 }
 
 // Function to toggle roster visibility
 function setupRosterToggle() {
-    const teamNames = document.querySelectorAll(".team-name");
-
-    teamNames.forEach((teamName) => {
+    document.querySelectorAll(".team-name").forEach((teamName) => {
         teamName.addEventListener("click", () => {
             const targetTable = document.getElementById(teamName.dataset.target);
             if (targetTable) {
@@ -47,25 +62,10 @@ function setupRosterToggle() {
     });
 }
 
-// Function to enable expand/collapse for blog sections
-function setupBlogToggle() {
-    const blogTitles = document.querySelectorAll(".blog-title");
-
-    blogTitles.forEach((title) => {
-        title.addEventListener("click", () => {
-            const targetContent = document.getElementById(title.dataset.target);
-            const isVisible = targetContent.style.display === "block";
-            targetContent.style.display = isVisible ? "none" : "block";
-
-            // Toggle expanded class for styling
-            title.parentElement.classList.toggle("expanded", !isVisible);
-        });
-    });
-}
-
-// Initialize the page after dynamic content is loaded
-includeHTML().then(() => {
-    setupNewsToggle();
+// Ensure all toggles are set up once DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
     setupBlogToggle();
+    setupNewsToggle();
     setupRosterToggle();
+    includeHTML();
 });
