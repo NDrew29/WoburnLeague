@@ -13,4 +13,4 @@ The Woburn Hockey League website offers visitors insights into game schedules, l
 - **Schedule**: Detailed schedule of upcoming games and events.
 - **News**: News page.
 - **Standings**: League Standings
-- 
+- **Blog**: League Coverage
