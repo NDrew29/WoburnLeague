@@ -182,3 +182,9 @@ footer {
 .blog-post.expanded .blog-content {
     display: block; /* Show when expanded */
 }
+
+/* Twitter Feed Styling */
+.twitter-feed {
+    margin-top: 20px;
+    text-align: center;
+}
