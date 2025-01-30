@@ -172,7 +172,7 @@ footer {
 
 /* Blog Content Styling */
 .blog-content {
-    /*display: none; /* Initially hidden */
+    display: none; /* Initially hidden */
     margin-top: 10px;
     line-height: 1.6;
     padding-left: 10px;
@@ -184,24 +184,31 @@ footer {
 }
 
 /* Twitter Feed */
-.twitter-viewbox {
-    display: flex;
-    justify-content: center;
-}
-
-/* Twitter Container */
 .twitter-container {
     text-align: center;
     margin-top: 20px;
+    width: 100%; /* Ensures it does not overflow */
+    max-width: 100%; /* Prevents exceeding section width */
+}
 
 /* Twitter View Box */
 .twitter-viewbox {
-    width: 400px; /* Adjust width */
-    height: 500px; /* Adjust height */
-    margin: auto;
-    overflow-y: scroll;
+    width: 100%; /* Make sure it does not exceed parent width */
+    max-width: 400px; /* Limit width for better appearance */
+    height: 500px; /* Keep fixed height */
+    margin: 0 auto; /* Center align */
+    overflow-y: auto; /* Allow scrolling if necessary */
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     background: #fff;
+    box-sizing: border-box; /* Ensures padding does not add to width */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 600px) {
+    .twitter-viewbox {
+        max-width: 100%; /* Make it fit smaller screens */
+        height: auto; /* Allow it to grow naturally */
+    }
 }
