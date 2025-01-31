@@ -62,6 +62,27 @@ function setupRosterToggle() {
     });
 }
 
+// Function to enable image modal for team images
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".team img").forEach(img => {
+        img.addEventListener("click", () => {
+            const modal = document.createElement("div");
+            modal.classList.add("image-modal");
+            modal.innerHTML = `<div class="modal-content"><img src="${img.src}" alt="${img.alt}"><span class="close">&times;</span></div>`;
+            document.body.appendChild(modal);
+
+            modal.querySelector(".close").addEventListener("click", () => {
+                modal.remove();
+            });
+
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) {
+                    modal.remove();
+                }
+            });
+        });
+    });
+
 // Ensure all toggles are set up once DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
     setupBlogToggle();
