@@ -212,3 +212,34 @@ footer {
         height: auto; /* Allow it to grow naturally */
     }
 }
+
+
+/* Schedule Table Styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.schedule-table caption {
+    caption-side: top;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.schedule-table thead {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
