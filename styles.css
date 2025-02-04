@@ -294,3 +294,11 @@ footer {
   margin-top: 10px;
   display: none; /* Roster tables start hidden and will be toggled visible */
 }
+
+.player-headshot {
+  width: 100px;  /* fixed width for all player images */
+  height: 150px; /* fixed height for all player images */
+  object-fit: cover; /* ensures the image covers the area without distorting aspect ratio */
+  display: block;  /* removes any extra space below the image */
+  margin: 0 auto; /* centers the image horizontally */
+}
