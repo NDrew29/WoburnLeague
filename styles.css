@@ -302,3 +302,7 @@ footer {
   display: block;  /* removes any extra space below the image */
   margin: 0 auto; /* centers the image horizontally */
 }
+
+.past-game {
+  text-decoration: line-through; /* This applies the strikethrough effect */
+}
