@@ -1,305 +1,241 @@
 /* General Body Styling */
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Header Styling */
 .header {
-    width: 100%;
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Banner */
 .banner h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #003f8a;
-    padding: 10px 0;
+  background-color: #003f8a;
+  padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 
 nav ul li a.active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Section Styling */
 section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 /* Team Styling */
 .team {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .team h3 {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 .team p {
-    font-size: 16px;
-    margin: 10px 0;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 /* Team Images */
 .team img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .team img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Image Modal */
 .image-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .image-modal .modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .image-modal img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
 }
 
 .image-modal .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #0056b3;
-    color: white;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0056b3;
+  color: white;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    nav ul li a {
-        font-size: 14px;
-    }
+  nav ul li a {
+    font-size: 14px;
+  }
 }
 
-/* Add styles for collapsible news content */
-.news-content {
-    display: none;
-    margin-top: 10px;
-    line-height: 1.6;
+/* Unified Feed Styling */
+.feed-item {
+  margin-bottom: 20px;
 }
 
-.news-headline {
-    cursor: pointer;
-    font-weight: bold;
-    color: #0056b3;
-    transition: color 0.3s ease;
+.feed-title {
+  cursor: pointer;
+  font-weight: bold;
+  color: #0056b3;
+  transition: color 0.3s ease;
+  margin-top: 20px;
+  font-size: 20px;  /* Consistent text size for all feed titles */
 }
 
-.news-headline:hover {
-    color: #ffcc00;
+.feed-title:hover {
+  color: #ffcc00;
 }
 
-.news-item.expanded {
-    border-left: 3px solid #0056b3;
-    padding-left: 10px;
+.feed-content {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+  padding-left: 10px;
+  border-left: 3px solid #0056b3;
 }
 
-/* Team Name Styling */
-.team-name {
-    cursor: pointer;
-    font-weight: bold;
-    color: #0056b3;
-    transition: color 0.3s ease;
-    margin-top: 20px;
-}
-
-.team-name:hover {
-    color: #ffcc00;
-}
-
-/* Roster Table Styling */
-.roster-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    display: none;
-}
-
-.roster-table th, .roster-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-.roster-table th {
-    background-color: #0056b3;
-    color: white;
-}
-
-.roster-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Player Headshot Styling */
-.player-headshot {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: auto;
-}
-
-/* Blog Title Styling */
-.blog-title {
-    cursor: pointer;
-    font-weight: bold;
-    color: #0056b3;
-    transition: color 0.3s ease;
-    margin-top: 20px;
-}
-
-.blog-title:hover {
-    color: #ffcc00;
-}
-
-/* Blog Content Styling */
-.blog-content {
-    display: none;
-    margin-top: 10px;
-    line-height: 1.6;
-    padding-left: 10px;
-    border-left: 3px solid #0056b3;
-}
-
-.blog-post.expanded .blog-content {
-    display: block;
+/* (Optional) Expanded state styling */
+.feed-title.expanded {
+  /* Additional style if needed */
 }
 
 /* Twitter Feed */
 .twitter-container {
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Twitter View Box */
 .twitter-viewbox {
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    margin: 0 auto;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    background: #fff;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 /* Ensure responsiveness */
 @media (max-width: 600px) {
-    .twitter-viewbox {
-        max-width: 100%;
-        height: auto;
-    }
+  .twitter-viewbox {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Schedule Table Styling */
 .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
 .schedule-table caption {
-    caption-side: top;
-    font-size: 1.25em;
-    margin-bottom: 10px;
-    font-weight: bold;
+  caption-side: top;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .schedule-table th,
 .schedule-table td {
-    border: 1px solid #ccc;
-    padding: 12px 15px;
-    text-align: center;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
 }
 
 .schedule-table thead {
-    background-color: #0056b3;
-    color: #fff;
+  background-color: #0056b3;
+  color: #fff;
 }
 
 .schedule-table tbody tr:nth-child(even) {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
