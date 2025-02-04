@@ -267,3 +267,20 @@ footer {
 .standings-table tbody tr:hover {
   background-color: #f1f1f1;
 }
+
+/* Roster Table Styling: Hide roster tables by default */
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  display: none; /* Roster tables start hidden and will be toggled visible */
+}
+
+/* Team Cheer Image Styling: Limit team cheer images to a max-width */
+.team-cheer {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
