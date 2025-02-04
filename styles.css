@@ -278,8 +278,8 @@ footer {
 
 /* Team Cheer Image Styling: Limit team cheer images to a max-width */
 .team-cheer {
-  max-width: 300px;
-  width: 100%;
+  max-width: 200px;
+  width: auto;
   height: auto;
   display: block;
   margin: 0 auto 20px;
