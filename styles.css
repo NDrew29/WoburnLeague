@@ -16,6 +16,14 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* index Page Image */
+.main-banner {
+  width: 100%;
+  height: auto;
+  max-height: 50vh; /* Limits the image height on larger screens */
+}
+
+
 /* Banner */
 .banner h1 {
   margin: 0;
