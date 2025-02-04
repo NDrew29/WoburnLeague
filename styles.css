@@ -73,6 +73,25 @@ section {
   color: #0056b3;
 }
 
+/* Team Name Styling (for toggling rosters) */
+.team-name {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+}
+.team-name:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+.team-name.active {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
 .team p {
   font-size: 16px;
   margin: 10px 0;
@@ -274,13 +293,4 @@ footer {
   border-collapse: collapse;
   margin-top: 10px;
   display: none; /* Roster tables start hidden and will be toggled visible */
-}
-
-/* Team Cheer Image Styling: Limit team cheer images to a max-width */
-.team-cheer {
-  max-width: 200px;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
 }
