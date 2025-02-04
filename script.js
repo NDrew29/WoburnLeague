@@ -29,7 +29,7 @@ function setupFeedToggle() {
   });
 }
 
-// Function to toggle roster visibility (unchanged)
+// Function to toggle roster visibility and update team-name styling
 function setupRosterToggle() {
   document.querySelectorAll(".team-name").forEach((teamName) => {
     teamName.addEventListener("click", () => {
@@ -37,6 +37,12 @@ function setupRosterToggle() {
       if (targetTable) {
         const isVisible = targetTable.style.display === "table";
         targetTable.style.display = isVisible ? "none" : "table";
+        // Toggle "active" class for styling (highlight when open)
+        if (!isVisible) {
+          teamName.classList.add("active");
+        } else {
+          teamName.classList.remove("active");
+        }
       }
     });
   });
