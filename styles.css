@@ -314,3 +314,37 @@ footer {
 .past-game {
   text-decoration: line-through; /* This applies the strikethrough effect */
 }
+
+/* Stats Table Styling */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.stats-table caption {
+    caption-side: top;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.stats-table th,
+.stats-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.stats-table thead {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.stats-table tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.stats-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
