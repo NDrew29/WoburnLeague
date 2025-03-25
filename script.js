@@ -48,7 +48,7 @@ function setupRosterToggle() {
   });
 }
 
-// Function to enable image modal for team images (unchanged)
+// Function to enable image modal for team images
 function setupImageModal() {
   document.querySelectorAll(".team img").forEach(img => {
     img.addEventListener("click", () => {
@@ -75,10 +75,23 @@ function setupImageModal() {
   });
 }
 
+// Optional: Set up bracket interactivity (e.g., highlighting on click)
+function setupBracketInteractivity() {
+  document.querySelectorAll('.bracket .matchup').forEach(matchup => {
+    matchup.addEventListener('click', () => {
+      matchup.classList.toggle('highlighted');
+    });
+  });
+}
+
 // Set up all functionality once the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   setupFeedToggle();
   setupRosterToggle();
   setupImageModal();
   includeHTML();
+  // Initialize bracket interactivity if a bracket is present
+  if (document.querySelector('.bracket')) {
+    setupBracketInteractivity();
+  }
 });
