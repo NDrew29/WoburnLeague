@@ -23,7 +23,6 @@ body {
   max-height: 50vh; /* Limits the image height on larger screens */
 }
 
-
 /* Banner */
 .banner h1 {
   margin: 0;
@@ -317,34 +316,69 @@ footer {
 
 /* Stats Table Styling */
 .stats-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
 .stats-table caption {
-    caption-side: top;
-    font-size: 1.25em;
-    margin-bottom: 10px;
-    font-weight: bold;
+  caption-side: top;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .stats-table th,
 .stats-table td {
-    border: 1px solid #ccc;
-    padding: 12px 15px;
-    text-align: center;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
 }
 
 .stats-table thead {
-    background-color: #0056b3;
-    color: #fff;
+  background-color: #0056b3;
+  color: #fff;
 }
 
 .stats-table tbody tr:nth-child(even) {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .stats-table tbody tr:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+/* Bracket Style Styling */
+.bracket {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Adjust spacing between rounds */
+  margin: 40px 0;
+}
+
+.round {
+  flex: 1;
+  text-align: center;
+}
+
+.round h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #0056b3;
+}
+
+.matchup {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.team {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border: 1px solid #0056b3;
+  border-radius: 4px;
 }
