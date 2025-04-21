@@ -18,10 +18,15 @@ body {
 
 /* index Page Image */
 .main-banner {
-  width: 100%;
-  height: auto;
-  max-height: 50vh; /* Limits the image height on larger screens */
+  width: 100%; /* Makes the image responsive to the width of its container */
+  height: auto; /* Maintains the image's aspect ratio */
+  max-width: 800px; /* Sets a max width to prevent the image from being too large on bigger screens */
+  margin: 20px auto; /* Centers the image horizontally and adds vertical spacing */
+  display: block; /* Ensures the image is block level to accept margin auto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  border-radius: 8px; /* Adds rounded corners for a smoother visual appeal */
 }
+
 
 /* Banner */
 .banner h1 {
