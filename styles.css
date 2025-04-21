@@ -382,3 +382,20 @@ footer {
   border: 1px solid #0056b3;
   border-radius: 4px;
 }
+
+.championship-announcement {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #eef;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.champion-image {
+  max-width: 90%;
+  height: auto;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
