@@ -407,4 +407,9 @@ footer {
   }
 }
 
+.team.eliminated {
+    text-decoration: line-through; /* Applies the strikethrough effect */
+    color: #888; /* Optional: change the color to indicate elimination more clearly */
+}
+
 
