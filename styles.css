@@ -393,9 +393,18 @@ footer {
 }
 
 .champion-image {
-  max-width: 90%;
-  height: auto;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  max-width: 600px; /* Sets a max width to prevent the image from being too large on bigger screens */
+  margin: 20px auto; /* Centers the image and adds vertical spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth with a subtle shadow */
+  border-radius: 8px; /* Rounds the corners for a smoother look */
 }
+
+@media (max-width: 768px) {
+  .champion-image {
+    max-width: 95%; /* Allows a little more room on smaller screens */
+  }
+}
+
 
