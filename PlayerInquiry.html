@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Player Inquiry - Woburn Hockey League</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="inquiry.js"></script>
+</head>
+<body>
+  <header></header>
+  <section>
+    <div class="container">
+      <h2>Interested in Playing Next Season?</h2>
+      <p>Submit your details below and we’ll reach out before next season!</p>
+      <form id="inquiryForm">
+        <label>Full Name:<br><input type="text" name="name" required></label><br><br>
+        <label>Date of Birth:<br><input type="date" name="dob" required></label><br><br>
+        <label>Playing Experience:<br><textarea name="experience" rows="3" required></textarea></label><br><br>
+        <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <button type="submit">Submit Inquiry</button>
+      </form>
+      <p id="confirmation" style="display:none; color: green; font-weight: bold;">Thank you! Your inquiry has been submitted.</p>
+    </div>
+  </section>
+  <footer></footer>
+</body>
+</html>
