@@ -298,7 +298,26 @@ footer {
 .standings-table tbody tr:hover {
   background-color: #f1f1f1;
 }
+/* --- SORTABLE COLUMN STYLING (ADDED) --- */
+.standings-table th {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
 
+.standings-table th:hover {
+  background: #004a99;
+}
+
+.standings-table th[data-sort-dir="asc"]::after {
+  content: " ▲";
+  font-size: 0.7rem;
+}
+
+.standings-table th[data-sort-dir="desc"]::after {
+  content: " ▼";
+  font-size: 0.7rem;
+}
 /* Roster Table Styling: Hide roster tables by default */
 .roster-table {
   width: 100%;
