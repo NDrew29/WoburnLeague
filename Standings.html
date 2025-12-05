@@ -14,59 +14,124 @@
     <div class="container">
       <h2>Standings</h2>
       <p>Check out the current standings for the season:</p>
+
       <table class="standings-table">
         <thead>
           <tr>
             <th>#</th>
             <th>Team</th>
-            <th>Games</th>
+            <th>GP</th>
             <th>W</th>
             <th>L</th>
             <th>SL</th>
             <th>Pts</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>Diff</th>
+            <th>Streak</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>Black</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Green</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
             <td>Red</td>
+            <td>2</td>
             <td>1</td>
             <td>0</td>
-            <td>0</td>
             <td>1</td>
-            <td>1</td>
+            <td>3</td>
+            <td>11</td>
+            <td>8</td>
+            <td>+3</td>
+            <td>W1</td>
           </tr>
+
           <tr>
-            <td>4</td>
+            <td>2</td>
             <td>White</td>
+            <td>2</td>
+            <td>1</td>
             <td>1</td>
             <td>0</td>
+            <td>2</td>
+            <td>7</td>
+            <td>8</td>
+            <td>-1</td>
+            <td>W1</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Black</td>
+            <td>2</td>
+            <td>1</td>
             <td>1</td>
             <td>0</td>
+            <td>2</td>
+            <td>7</td>
+            <td>8</td>
+            <td>-1</td>
+            <td>L1</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Green</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
             <td>0</td>
+            <td>2</td>
+            <td>9</td>
+            <td>10</td>
+            <td>-1</td>
+            <td>L1</td>
           </tr>
         </tbody>
       </table>
+
     </div>
   </section>
   <footer></footer>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const table = document.querySelector(".standings-table");
+    const headers = table.querySelectorAll("th");
+
+    headers.forEach((header, index) => {
+        header.addEventListener("click", () => {
+            sortTable(table, index);
+        });
+    });
+
+    function sortTable(table, colIndex) {
+        const tbody = table.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        const isNumeric = !isNaN(rows[0].children[colIndex].innerText.trim().replace('+', ''));
+
+        const currentDir = headers[colIndex].dataset.sortDir === "asc" ? "desc" : "asc";
+        headers.forEach(h => h.dataset.sortDir = ""); 
+        headers[colIndex].dataset.sortDir = currentDir;
+
+        rows.sort((a, b) => {
+            let A = a.children[colIndex].innerText.trim().replace('+', '');
+            let B = b.children[colIndex].innerText.trim().replace('+', '');
+
+            if (isNumeric) {
+                A = parseFloat(A);
+                B = parseFloat(B);
+                return currentDir === "asc" ? A - B : B - A;
+            } else {
+                return currentDir === "asc"
+                    ? A.localeCompare(B)
+                    : B.localeCompare(A);
+            }
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+    }
+});
+</script>
+
 </body>
 </html>
