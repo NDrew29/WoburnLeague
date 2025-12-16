@@ -7,55 +7,127 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+
+    <style>
+        .stats-table th {
+            cursor: pointer;
+        }
+        .stats-table th:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header></header>
-    <section>
-        <h2>League Leaders</h2>
-        <table class="stats-table">
-            <thead>
-                <tr>
-                    <th>Player</th>
-                    <th>Team</th>
-                    <th>Games</th>
-                    <th>Goals</th>
-                    <th>Assists</th>
-                    <th>Pts</th>
-                    <th>PPG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Andy Cripps</td><td>Black</td><td>1</td><td>2</td><td>2</td><td>4</td><td>4.00</td></tr>
-                <tr><td>Brendan Driscoll</td><td>Green</td><td>1</td><td>3</td><td>0</td><td>3</td><td>3.00</td></tr>
-                <tr><td>Shawn Bates</td><td>Green</td><td>1</td><td>2</td><td>1</td><td>3</td><td>3.00</td></tr>
-                <tr><td>Marv Degon</td><td>Black</td><td>1</td><td>0</td><td>2</td><td>2</td><td>2.00</td></tr>
-                <tr><td>Brendan Ronan</td><td>Black</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2.00</td></tr>
-                <tr><td>Dave McDonald</td><td>Red</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2.00</td></tr>
-                <tr><td>Liam Centrella</td><td>Red</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2.00</td></tr>
-                <tr><td>Alex Carle</td><td>Green</td><td>1</td><td>0</td><td>2</td><td>2</td><td>2.00</td></tr>
-                <tr><td>Sean Walsh</td><td>Black</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Billy Carrabino</td><td>Black</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Scott Holm</td><td>White</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Ryan Flanigan</td><td>White</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Frank Bova</td><td>Red</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Tyler Whitney</td><td>Red</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Steve Salemi</td><td>Red</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Corey Flanigan</td><td>White</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Joe Loprieno</td><td>White</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Bryan Last</td><td>White</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Austin Goldstein</td><td>Black</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Danny Mac</td><td>Black</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Matt Ronan</td><td>Black</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Steve Cucinatti</td><td>Black</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Ross Gaudet</td><td>Red</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>T.C. Harris</td><td>Red</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>C. Toomey</td><td>Red</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Danny Graham</td><td>Green</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>McLaughlin</td><td>Green</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-                <tr><td>Danny Furlong</td><td>Green</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
-            </tbody>
-        </table>
-    </section>
-    <footer></footer>
+<header></header>
+
+<section>
+    <h2>League Leaders</h2>
+
+    <table class="stats-table" id="leadersTable">
+        <thead>
+        <tr>
+            <th>Player</th>
+            <th data-sort="team">Team</th>
+            <th>Games</th>
+            <th data-sort="goals">Goals</th>
+            <th>Assists</th>
+            <th data-sort="pts">Pts</th>
+            <th data-sort="ppg">PPG</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!-- ===== BLACK ===== -->
+        <tr><td>Andy Cripps</td><td>Black</td><td>3</td><td>2</td><td>2</td><td>4</td><td>1.33</td></tr>
+        <tr><td>Austin Goldstein</td><td>Black</td><td>3</td><td>0</td><td>3</td><td>3</td><td>1.00</td></tr>
+        <tr><td>Billy Carrabino</td><td>Black</td><td>3</td><td>3</td><td>0</td><td>3</td><td>1.00</td></tr>
+        <tr><td>Brendan Ronan</td><td>Black</td><td>3</td><td>3</td><td>3</td><td>6</td><td>2.00</td></tr>
+        <tr><td>Danny Mac</td><td>Black</td><td>3</td><td>0</td><td>1</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Marv Degon</td><td>Black</td><td>3</td><td>1</td><td>4</td><td>5</td><td>1.67</td></tr>
+        <tr><td>Joe Zappala</td><td>Black</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
+        <tr><td>Ronny DiMasi</td><td>Black</td><td>3</td><td>0</td><td>3</td><td>3</td><td>1.00</td></tr>
+        <tr><td>Matt Ronan</td><td>Black</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0.50</td></tr>
+        <tr><td>Sean Walsh</td><td>Black</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Steve Cucinatti</td><td>Black</td><td>3</td><td>0</td><td>1</td><td>1</td><td>0.33</td></tr>
+
+        <!-- ===== GREEN ===== -->
+        <tr><td>Alex Carle</td><td>Green</td><td>3</td><td>1</td><td>2</td><td>3</td><td>1.00</td></tr>
+        <tr><td>Brett Gensler</td><td>Green</td><td>1</td><td>1</td><td>2</td><td>3</td><td>3.00</td></tr>
+        <tr><td>Brendan Driscoll</td><td>Green</td><td>3</td><td>6</td><td>0</td><td>6</td><td>2.00</td></tr>
+        <tr><td>Justin Bonitatibus</td><td>Green</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0.50</td></tr>
+        <tr><td>Keith Aucoin</td><td>Green</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Ian Driscoll</td><td>Green</td><td>3</td><td>1</td><td>2</td><td>3</td><td>1.00</td></tr>
+        <tr><td>Danny Furlong</td><td>Green</td><td>3</td><td>0</td><td>1</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Danny Graham</td><td>Green</td><td>3</td><td>0</td><td>2</td><td>2</td><td>0.67</td></tr>
+        <tr><td>Rocco Maitino</td><td>Green</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
+        <tr><td>Shawn Bates</td><td>Green</td><td>2</td><td>2</td><td>3</td><td>5</td><td>2.50</td></tr>
+        <tr><td>Shawn McLaughlin</td><td>Green</td><td>3</td><td>0</td><td>2</td><td>2</td><td>0.67</td></tr>
+
+        <!-- ===== RED ===== -->
+        <tr><td>C. Toomey</td><td>Red</td><td>3</td><td>0</td><td>2</td><td>2</td><td>0.67</td></tr>
+        <tr><td>Dave McDonald</td><td>Red</td><td>3</td><td>1</td><td>1</td><td>2</td><td>0.67</td></tr>
+        <tr><td>Frank Bova</td><td>Red</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Liam Centrella</td><td>Red</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1.00</td></tr>
+        <tr><td>Ross Gaudet</td><td>Red</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0.50</td></tr>
+        <tr><td>Casey Goll</td><td>Red</td><td>3</td><td>0</td><td>2</td><td>2</td><td>0.67</td></tr>
+        <tr><td>Steve Salemi</td><td>Red</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Jace Henning</td><td>Red</td><td>1</td><td>2</td><td>1</td><td>3</td><td>3.00</td></tr>
+        <tr><td>Danny Campbell</td><td>Red</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Justin Mansfield</td><td>Red</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0.50</td></tr>
+        <tr><td>T.C. Harris</td><td>Red</td><td>2</td><td>1</td><td>3</td><td>4</td><td>2.00</td></tr>
+        <tr><td>Tyler Whitney</td><td>Red</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+
+        <!-- ===== WHITE ===== -->
+        <tr><td>Bryan Last</td><td>White</td><td>3</td><td>1</td><td>1</td><td>2</td><td>0.67</td></tr>
+        <tr><td>Chad Filtreau</td><td>White</td><td>2</td><td>2</td><td>1</td><td>3</td><td>1.50</td></tr>
+        <tr><td>Kevin Clare</td><td>White</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Corey Flanigan</td><td>White</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1.00</td></tr>
+        <tr><td>Joe Yeadon</td><td>White</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0.33</td></tr>
+        <tr><td>Joe Loprieno</td><td>White</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0.50</td></tr>
+        <tr><td>Ryan Flanigan</td><td>White</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1.00</td></tr>
+        <tr><td>Scott Holm</td><td>White</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0.50</td></tr>
+        <tr><td>Matt Sieckhaus</td><td>White</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0.00</td></tr>
+        <tr><td>Mike Murphy</td><td>White</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0.00</td></tr>
+
+        </tbody>
+    </table>
+</section>
+
+<footer></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const table = document.getElementById("leadersTable");
+    const headers = table.querySelectorAll("th[data-sort]");
+    const tbody = table.querySelector("tbody");
+
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const colIndex = Array.from(header.parentNode.children).indexOf(header);
+            const type = header.dataset.sort;
+
+            const dir = header.dataset.dir === "asc" ? "desc" : "asc";
+            headers.forEach(h => h.dataset.dir = "");
+            header.dataset.dir = dir;
+
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+
+            rows.sort((a, b) => {
+                let A = a.children[colIndex].innerText.trim();
+                let B = b.children[colIndex].innerText.trim();
+
+                if (type === "team") {
+                    return dir === "asc" ? A.localeCompare(B) : B.localeCompare(A);
+                } else {
+                    return dir === "asc" ? parseFloat(A) - parseFloat(B) : parseFloat(B) - parseFloat(A);
+                }
+            });
+
+            rows.forEach(r => tbody.appendChild(r));
+        });
+    });
+});
+</script>
+
 </body>
 </html>
